@@ -1,9 +1,6 @@
-﻿# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-import numpy as np
+﻿import numpy as np
 import scipy.linalg as linalg
+
 
 def solve_lin_eqs_system(first_str, second_str):
     a11, a12, b1 = first_str.split(' ')
@@ -16,9 +13,8 @@ def solve_lin_eqs_system(first_str, second_str):
 
     return linalg.solve(index_matrix, result_vector)
 
-first_string = '1 5 11'
-second_string = '2 3 8'
-x, y = solve_lin_eqs_system(first_string, second_string)
-print(x, y)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+first_string = input()
+second_string = input()
+x, y = solve_lin_eqs_system(first_string, second_string)
+print(round(x, 3), round(y, 3))
